@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="hy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AWEEXP — բաց կոդով նախագծերի հրապարակման և հայտնաբերման հարթակ։">
+  <title>AWEEXP — Open Project Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">A</span><span>AWE<span>EXP</span></span></a>
+    <nav><a href="#discover">Նախագծեր</a><a href="#categories">Բաժիններ</a><a href="#rules">Կանոններ</a><a href="#blog">Բլոգ</a></nav>
+    <a class="submit" href="https://forms.gle/F4oMQiyt3bNibJTP9" target="_blank" rel="noopener">Հանձնել նախագիծ ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="eyebrow">AWE ECOSYSTEM · OPEN SOURCE</div>
+      <h1>Կառուցիր։<br><em>Հրապարակիր։</em><br>Զարգացրու։</h1>
+      <p class="lead">AWEEXP-ը AWE-ի բաց կոդով նախագծերի հանրային ցուցասրահն է։ Այստեղ կարող են հայտնվել AWE-ի և համայնքի որակյալ նախագծերը՝ կայքերից մինչև հավելվածներ ու գործիքներ։</p>
+      <div class="hero-actions"><a class="primary" href="#discover">Դիտել նախագծերը <span>↓</span></a><a class="ghost" href="https://forms.gle/F4oMQiyt3bNibJTP9" target="_blank" rel="noopener">Ուղարկել նախագիծ ↗</a></div>
+      <div class="hero-stats"><div><b id="stat-projects">0</b><span>նախագիծ</span></div><div><b id="stat-types">0</b><span>տեսակ</span></div><div><b>OPEN</b><span>source only</span></div></div>
+    </section>
+
+    <section id="discover" class="section">
+      <div class="section-head"><div><div class="kicker">DISCOVER</div><h2>Բոլոր նախագծերը</h2></div><div class="controls"><input id="search" type="search" placeholder="Որոնել նախագիծ…" aria-label="Որոնել նախագիծ"><select id="type-filter" aria-label="Տեսակ"><option value="all">Բոլոր տեսակները</option></select></div></div>
+      <div id="project-grid" class="project-grid"></div>
+      <div id="empty" class="empty" hidden><div class="empty-icon">◇</div><h3>Դեռ հրապարակված նախագիծ չկա</h3><p>Առաջին նախագիծը կարող է լինել քոնը։</p><a class="primary small" href="https://forms.gle/F4oMQiyt3bNibJTP9" target="_blank" rel="noopener">Ուղարկել նախագիծ ↗</a></div>
+    </section>
+
+    <section id="categories" class="section categories"><div class="kicker">EXPLORE BY TYPE</div><h2>Նախագծերի աշխարհը</h2><div id="category-grid" class="category-grid"></div></section>
+
+    <section id="rules" class="section rules"><div class="rule-copy"><div class="kicker">PUBLISHING STANDARD</div><h2>Պարզ կանոններ.<br><em>բարձր չափանիշներ։</em></h2><p>Հաստատումը ավտոմատ կամ երաշխավորված չէ։ Յուրաքանչյուր ուղարկված նախագիծ անցնում է AWEEXP-ի պահանջների ստուգում։</p><a class="ghost" href="POLICY.md">Կարդալ ամբողջ կանոնակարգը</a></div><div class="rule-list"><div><span>01</span><b>Բաց կոդ</b><p>Նախագիծը պետք է ունենա հասանելի source code և բաց կոդի լիցենզիա։</p></div><div><span>02</span><b>Առնվազն 2 ֆայլ</b><p>Web նախագծի համար՝ նվազագույնը 2 և առավելագույնը 10 ֆայլ, առավելագույնը 2 պանակ։</p></div><div><span>03</span><b>Մաքուր և օրինական</b><p>Ոչ գովազդ, ոչ վնասակար կամ անօրինական բովանդակություն, ոչ չարտոնված հղումներ։</p></div><div><span>04</span><b>Անհատական ստուգում</b><p>Ուղարկելը չի նշանակում ավտոմատ ընդունում։ AWEEXP-ը կարող է մերժել նախագիծը։</p></div></div></section>
+
+    <section id="blog" class="section blog"><div class="section-head"><div><div class="kicker">AWEEXP JOURNAL</div><h2>Բլոգ և նորություններ</h2></div><span class="muted">Coming soon</span></div><div class="blog-card"><div class="blog-art">AWE<br><span>EXP</span></div><div><div class="tag">AWEEXP</div><h3>Բաց կոդով գաղափարից մինչև AWE պրոդուկտ</h3><p>Հարթակի զարգացման, նոր նախագծերի և AWE ecosystem-ի մասին հրապարակումներ։</p></div></div></section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">A</span><span>AWE<span>EXP</span></span></div><p>Open projects. Shared progress. AWE ecosystem.</p><div><a href="POLICY.md">Կանոններ</a><a href="https://forms.gle/F4oMQiyt3bNibJTP9" target="_blank" rel="noopener">Submission</a></div></footer>
+  <script src="web/web.js"></script><script src="apps/apps.js"></script><script src="cli/cli.js"></script><script src="gui/gui.js"></script><script src="android/android.js"></script><script src="games/games.js"></script><script src="ai/ai.js"></script><script src="tools/tools.js"></script><script src="app.js"></script>
+</body>
+</html>
