@@ -9,7 +9,9 @@ function injectAWEHubNav(){
   if(document.querySelector('#aweHubNav'))return;
   const nav=document.querySelector('.topbar nav');
   if(!nav)return;
-  [['AWE A2Z','https://awe-a2z.pages.dev/'],['AWEEXP','https://awe-exp.pages.dev/'],['AWEGame','https://awegame.pages.dev/'],['AWEARCHIVE','https://awearchive.pages.dev/']].forEach(([name,url],i)=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=name;a.id=i===0?'aweHubNav':`aweHub-${i}`;nav.appendChild(a)});
+  const links=[['AWE A2Z','https://awe-a2z.pages.dev/'],['AWEEXP','https://awe-exp.pages.dev/'],['AWEGame','https://awegame.pages.dev/'],['AWELib','https://awelib.pages.dev/'],['AWE Blog','https://blogma-wa.blogspot.com/']];
+  const style=document.createElement('style');style.textContent=`#aweHubNav,#aweHubNav~a{position:relative;overflow:hidden;transition:transform .25s ease,color .25s ease,background .25s ease;animation:aweNavIn .55s both}#aweHubNav::after,#aweHubNav~a::after{content:"";position:absolute;left:12%;right:12%;bottom:2px;height:2px;border-radius:99px;background:currentColor;transform:scaleX(0);transition:transform .25s ease}#aweHubNav:hover,#aweHubNav~a:hover{transform:translateY(-2px);color:#7657e8}#aweHubNav:hover::after,#aweHubNav~a:hover::after{transform:scaleX(1)}@keyframes aweNavIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}`;document.head.appendChild(style);
+  links.forEach(([name,url],i)=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=name;a.id=i===0?'aweHubNav':`aweHub-${i}`;a.style.animationDelay=`${i*70}ms`;nav.appendChild(a)});
 }
 injectAWEHubNav();
 categories.forEach(c => { const o=document.createElement('option'); o.value=c.type; o.textContent=c.label; filter.appendChild(o); });
